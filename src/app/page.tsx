@@ -1,91 +1,36 @@
 import Image from 'next/image'
-import { Inter } from 'next/font/google'
+//import { Inter } from 'next/font/google'
 import styles from './page.module.css'
 
-const inter = Inter({ subsets: ['latin'] })
-
-export default function Home() {
+export default function Page() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
+    <div>
+            <div className='mt-20 mb-10 bg-yellow-50'>
+              <div>This is a first line</div>
+              <button className='bg-yellow-500 p-4 m-4'>Button</button>
+              <div>This is a last line</div>
+            </div>
+            <div>
+              <div>
+                Margins, Paddings, and Borders
+              </div>
+              <div className="mt-20 mb-10">
+                <button className="p-10 border border-black">One</button>
+                <button className="m-10 border border-black">Two</button>
+                <button className="m-2 p-2 border-4 border-black">Three</button>
+              </div>
+              <div>
+                <button className="m-4 p-4 border-2 border-black rounded-md">
+                Four
+                </button>
+                <button className="m-4 p-4 border-2 border-black rounded-2xl">
+                Five
+                </button>
+                <button className="m-4 p-4 border-2 border-black rounded-full">
+                Six
+                </button>
+            </div>
+          </div>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-        </div>
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
   )
 }
